@@ -1,0 +1,6 @@
+Aclaraciones:
+Aún faltan props para el decorado de las habitaciones, un puzzle más y los props para las iluminaciones.
+
+Los props del escenario se pueden ver individualmente.
+
+La iluminación es provisional.
