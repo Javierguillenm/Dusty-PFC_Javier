@@ -80,7 +80,107 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Dusty Model(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Dusty_Skin
+      parentName: Dusty Model(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 20.069426, y: 20.069426, z: 20.069426}
+    - name: B_Cadera
+      parentName: Dusty Model(Clone)
+      position: {x: -0, y: 0.59483385, z: -0.045419883}
+      rotation: {x: 0.54232526, y: -0.45374408, z: -0.542325, w: 0.45374367}
+      scale: {x: 1, y: 1, z: 1}
+    - name: D_Pierna1
+      parentName: B_Cadera
+      position: {x: -0.021286048, y: 0.033910684, z: 0.05809654}
+      rotation: {x: -0.023282204, y: -0.0034231325, z: 0.98909116, w: -0.14541279}
+      scale: {x: 1, y: 1, z: 1}
+    - name: D_Pierna2
+      parentName: D_Pierna1
+      position: {x: -0.3121292, y: -0.0000000667572, z: -0.000000057220458}
+      rotation: {x: 0.0062486236, y: -0.011391239, z: -0.10547765, w: 0.9943368}
+      scale: {x: 1, y: 1, z: 1}
+    - name: B_Spine1
+      parentName: B_Cadera
+      position: {x: -0.090790324, y: -0.000000047683713, z: 0.00000001615901}
+      rotation: {x: -0.000000242869, y: 0.00000003672595, z: 0.0774278, w: 0.996998}
+      scale: {x: 1, y: 1, z: 1}
+    - name: B_Spine2
+      parentName: B_Spine1
+      position: {x: -0.089481965, y: -0.000000009536743, z: 0.000000021561599}
+      rotation: {x: 0.000000023746656, y: 0.000000055417683, z: 0.057507817, w: 0.9983451}
+      scale: {x: 1, y: 1, z: 1}
+    - name: B_Spine3
+      parentName: B_Spine2
+      position: {x: -0.086470336, y: 0.000000014305114, z: 0.000000011012894}
+      rotation: {x: -0.0000000042529424, y: -0.000000052399233, z: -0.11802816, w: 0.9930103}
+      scale: {x: 1, y: 1, z: 1}
+    - name: B_Neck
+      parentName: B_Spine3
+      position: {x: -0.09536705, y: 0.00000020980835, z: 0.000000011382599}
+      rotation: {x: -0.0000000019862985, y: -0.00000007286101, z: -0.045769244, w: 0.9989521}
+      scale: {x: 1, y: 1, z: 1}
+    - name: B_Head
+      parentName: B_Neck
+      position: {x: -0.1007254, y: -0.000000095367426, z: 0.000000010324874}
+      rotation: {x: 0.0000000051264104, y: 0.00000005356975, z: 0.109294154, w: 0.9940095}
+      scale: {x: 1, y: 1, z: 1}
+    - name: D_Hombro
+      parentName: B_Spine3
+      position: {x: -0.07786537, y: 0.049123134, z: 0.033450242}
+      rotation: {x: -0.39109674, y: 0.49226516, z: 0.59177226, w: 0.5045038}
+      scale: {x: 1, y: 1, z: 1}
+    - name: I_Brazo1
+      parentName: D_Hombro
+      position: {x: -0.10314761, y: -0.00000015258789, z: 0.000000038146972}
+      rotation: {x: -0.0740751, y: 0.11563423, z: -0.05157992, w: 0.98918205}
+      scale: {x: 1, y: 1, z: 1}
+    - name: I_Brazo2
+      parentName: I_Brazo1
+      position: {x: -0.18880759, y: -0.000000076293944, z: 1.5206751e-10}
+      rotation: {x: 0.000000232471, y: -0.00012365347, z: -0.0005000011, w: 0.9999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: I_Mano
+      parentName: I_Brazo2
+      position: {x: -0.14999452, y: -0.000000076293944, z: -6.0535965e-11}
+      rotation: {x: -0.70668536, y: 0.02458875, z: -0.024418928, w: 0.70667875}
+      scale: {x: 1, y: 1, z: 1}
+    - name: I_Hombro
+      parentName: B_Spine3
+      position: {x: -0.07786537, y: 0.049123097, z: -0.028750457}
+      rotation: {x: 0.49226508, y: 0.39109695, z: -0.5045037, w: 0.59177214}
+      scale: {x: -1, y: -1, z: -1}
+    - name: I_Brazo1
+      parentName: I_Hombro
+      position: {x: -0.10314762, y: 0, z: 0.000000009536743}
+      rotation: {x: -0.074081935, y: 0.11561726, z: -0.051631518, w: 0.98918086}
+      scale: {x: 1, y: 1, z: 1}
+    - name: I_Brazo2
+      parentName: I_Brazo1
+      position: {x: -0.18880759, y: 0.000000076293944, z: 1.5148544e-10}
+      rotation: {x: 0.00000023332422, y: -0.000066874796, z: -0.00027053434, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: I_Mano
+      parentName: I_Brazo2
+      position: {x: -0.14999452, y: -0.00000015258789, z: -6.7520885e-11}
+      rotation: {x: 0.7066757, y: -0.024574386, z: -0.02468259, w: 0.7066798}
+      scale: {x: 1, y: 1, z: 1}
+    - name: I_Pierna1
+      parentName: B_Cadera
+      position: {x: -0.021286124, y: 0.033910666, z: -0.058258817}
+      rotation: {x: -0.0036672023, y: 0.023271833, z: 0.14541593, w: 0.9890901}
+      scale: {x: -1, y: -1, z: -1}
+    - name: I_Pierna2
+      parentName: I_Pierna1
+      position: {x: -0.31212923, y: -0.00000006198883, z: -0.000000009536743}
+      rotation: {x: 0.0062486236, y: -0.011391238, z: -0.10547789, w: 0.9943368}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -89,15 +189,15 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: B_Cadera
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: fd46959863d65014cae92dff0b741b49, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0

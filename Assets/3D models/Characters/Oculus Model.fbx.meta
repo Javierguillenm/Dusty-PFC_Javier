@@ -10,7 +10,7 @@ ModelImporter:
     materialSearch: 1
     materialLocation: 1
   animations:
-    legacyGenerateAnimations: 4
+    legacyGenerateAnimations: 0
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
@@ -24,7 +24,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -80,7 +80,167 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Oculus Model(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Oculus
+      parentName: Oculus Model(Clone)
+      position: {x: 0.00004250503, y: -0.002138672, z: -0.009427947}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 10.973413, y: 10.973413, z: 10.973413}
+    - name: C_Main
+      parentName: Oculus Model(Clone)
+      position: {x: 0.00004250503, y: 0.986378, z: 0.0068664285}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 2.209375, y: 2.209375, z: 2.209375}
+    - name: C_Pelvis
+      parentName: C_Main
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7021543, y: -0.08354305, z: -0.70215416, w: 0.08354305}
+      scale: {x: 1, y: 1, z: 1}
+    - name: C_Spine1
+      parentName: C_Pelvis
+      position: {x: -0.07041057, y: -0.000000009536743, z: -1.1641532e-12}
+      rotation: {x: 0.000000588393, y: -0.0000000029565155, z: -0.005024675, w: 0.99998736}
+      scale: {x: 1, y: 1, z: 1}
+    - name: C_Spine2
+      parentName: C_Spine1
+      position: {x: -0.05353054, y: 0, z: 1.1641532e-12}
+      rotation: {x: -0.0000002852249, y: 0.000000012441161, z: -0.19602479, w: 0.9805989}
+      scale: {x: 1, y: 1, z: 1}
+    - name: C_Spine3
+      parentName: C_Spine2
+      position: {x: -0.055283546, y: -0.000000085830685, z: 0}
+      rotation: {x: 4.4356502e-15, y: 2.157317e-16, z: 0.048578452, w: 0.9988194}
+      scale: {x: 1, y: 1, z: 1}
+    - name: C_Neck1
+      parentName: C_Spine3
+      position: {x: -0.06203247, y: 0.0000002813339, z: 0}
+      rotation: {x: -0.000000032539845, y: -0.000000052559777, z: 0.22900142, w: 0.9734261}
+      scale: {x: 1, y: 1, z: 1}
+    - name: C_Neck2
+      parentName: C_Neck1
+      position: {x: -0.055663146, y: 0.00000020980835, z: 0}
+      rotation: {x: -0.000000049674355, y: -0.00000003679443, z: -0.14732939, w: 0.9890875}
+      scale: {x: 1, y: 1, z: 1}
+    - name: C_Neck3
+      parentName: C_Neck2
+      position: {x: -0.059352722, y: -0.0000000834465, z: 1.1641532e-12}
+      rotation: {x: -0.000000047192756, y: -0.000000039927606, z: -0.08310385, w: 0.9965409}
+      scale: {x: 1, y: 1, z: 1}
+    - name: C_Neck4
+      parentName: C_Neck3
+      position: {x: -0.07093651, y: 0, z: 0}
+      rotation: {x: -1.6399693e-15, y: -2.003951e-15, z: -0.14490953, w: 0.9894449}
+      scale: {x: 1, y: 1, z: 1}
+    - name: C_Head
+      parentName: C_Neck4
+      position: {x: -0.06308487, y: -0.000000076293944, z: 0}
+      rotation: {x: 1.7957406e-15, y: 2.5081772e-15, z: -0.093143925, w: 0.9956527}
+      scale: {x: 1, y: 1, z: 1}
+    - name: C_Ankle_R
+      parentName: C_Main
+      position: {x: 0.047508907, y: -0.027223928, z: -0.11375282}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.243565, y: 0.243565, z: 0.243565}
+    - name: C_Ankle_L
+      parentName: C_Main
+      position: {x: -0.04772684, y: -0.027223794, z: -0.11375282}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.243565, y: 0.243565, z: 0.243565}
+    - name: IK_R_Leg
+      parentName: Oculus Model(Clone)
+      position: {x: 0.11201494, y: 0.0000045013426, z: -0.04123591}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 2.209375, y: 2.209375, z: 2.209375}
+    - name: IK_L_Leg
+      parentName: Oculus Model(Clone)
+      position: {x: -0.11241127, y: 0.0000045776364, z: -0.04123593}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 2.209375, y: 2.209375, z: 2.209375}
+    - name: B_Pelvis
+      parentName: Oculus Model(Clone)
+      position: {x: 0.00004250503, y: 0.986378, z: 0.0068664285}
+      rotation: {x: 0.43742418, y: -0.5555719, z: -0.43742403, w: 0.5555719}
+      scale: {x: 2.2093751, y: 2.209375, z: 2.209375}
+    - name: B_Spine1
+      parentName: B_Pelvis
+      position: {x: -0.07041057, y: 0, z: -0.0000000032142269}
+      rotation: {x: -0, y: -0, z: -0.005024612, w: 0.99998736}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: B_Spine2
+      parentName: B_Spine1
+      position: {x: -0.053530578, y: 0.000000028610229, z: 0.0000000044424087}
+      rotation: {x: 0.00000040233135, y: -0.000000059604645, z: -0.19602485, w: 0.980599}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: B_Spine3
+      parentName: B_Spine2
+      position: {x: -0.055283584, y: -0.000000095367426, z: 1.1641532e-12}
+      rotation: {x: 0.0000006258487, y: 0.00000016391276, z: 0.048578463, w: 0.99881935}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: B_Neck1
+      parentName: B_Spine3
+      position: {x: -0.062032506, y: 0.00000027656554, z: 5.0058585e-10}
+      rotation: {x: -0.0000011324883, y: 0.000000029802322, z: 0.22900149, w: 0.9734261}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: B_Neck2
+      parentName: B_Neck1
+      position: {x: -0.05566322, y: 0.00000020980835, z: 0.0000000024598557}
+      rotation: {x: -0.00000059604645, y: 0.00000014901161, z: -0.14732945, w: 0.9890875}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: B_Neck3
+      parentName: B_Neck2
+      position: {x: -0.059352722, y: -0.00000006198883, z: 0.0000000012898818}
+      rotation: {x: 0.0000016093254, y: -0.00000011920929, z: -0.08310382, w: 0.99654096}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: B_Neck4
+      parentName: B_Neck3
+      position: {x: -0.07093635, y: 0.000000009536743, z: 5.704351e-10}
+      rotation: {x: -0.00000078976154, y: -0.00000010430813, z: -0.14490958, w: 0.989445}
+      scale: {x: 1, y: 1.0000004, z: 1.0000002}
+    - name: B_Head
+      parentName: B_Neck4
+      position: {x: -0.06308502, y: -0.00000015258789, z: -1.1641532e-12}
+      rotation: {x: -0.00000008940697, y: 0.000000014901161, z: -0.09314379, w: 0.9956527}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: B_HeadEnd
+      parentName: B_Head
+      position: {x: -0.065193705, y: -0.000000076293944, z: 1.2340023e-10}
+      rotation: {x: -3.6637402e-15, y: -3.4381042e-15, z: -0.031755462, w: 0.9994957}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Leg1
+      parentName: B_Pelvis
+      position: {x: -0.02746479, y: -0.0071257493, z: 0.022025876}
+      rotation: {x: 0.07550776, y: 0.0033432245, z: -0.99712634, w: -0.0051368177}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: L_Leg2
+      parentName: L_Leg1
+      position: {x: -0.1468608, y: 0.000000019073486, z: 0}
+      rotation: {x: 0.011536139, y: 0.0747692, z: 0.21516986, w: -0.9736418}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000002}
+    - name: L_FootEnd
+      parentName: L_Leg2
+      position: {x: -0.33629963, y: -0.000000102519984, z: 0.000000009536743}
+      rotation: {x: 0.029277055, y: 0.04653357, z: 0.028372444, w: 0.99808437}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Leg1
+      parentName: B_Pelvis
+      position: {x: -0.02746479, y: -0.007125759, z: -0.0218079}
+      rotation: {x: -0.0033431947, y: 0.07550764, z: -0.005136892, w: 0.9971264}
+      scale: {x: -1, y: -0.99999994, z: -1.0000001}
+    - name: R_Leg2
+      parentName: R_Leg1
+      position: {x: -0.14686087, y: 0.000000019073486, z: 0.000000019073486}
+      rotation: {x: 0.011534766, y: 0.074769564, z: 0.21517026, w: -0.97364175}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+    - name: R_FootEnd
+      parentName: R_Leg2
+      position: {x: -0.3362997, y: -0.00000010848045, z: 0}
+      rotation: {x: 0.02927697, y: 0.046534035, z: 0.028373176, w: 0.9980844}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -88,16 +248,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
-    rootMotionBoneName: 
+    globalScale: 1
+    rootMotionBoneName: B_Pelvis
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0

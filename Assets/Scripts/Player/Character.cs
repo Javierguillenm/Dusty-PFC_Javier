@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject player, player1;
     [SerializeField] private Animator anim;
     private int numBullet;
     [SerializeField] private bool inmunity = false;
