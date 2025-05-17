@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Metal
   m_EditorClassIdentifier: 
   DMG: 462
-  durability: 12
+  durability: -1
   maxDurability: 15

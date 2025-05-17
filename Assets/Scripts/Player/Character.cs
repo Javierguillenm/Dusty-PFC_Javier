@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private GameObject player, player1;
+    [SerializeField] private GameObject player;
     [SerializeField] private Animator anim;
+    public AudioSource DustSound;
+    public AudioSource Woodsteps;
     private int numBullet;
     [SerializeField] private bool inmunity = false;
     [SerializeField] private float inmunityF;
@@ -168,8 +170,9 @@ public class Character : MonoBehaviour
         }
         else
         {
-            SPD = 3; 
-        }   
+            SPD = 3;
+            Woodsteps.Play();
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -181,6 +184,7 @@ public class Character : MonoBehaviour
             }
             Polvo collectScript = other.gameObject.GetComponent<Polvo>(); 
             mony += collectScript.value;
+            DustSound.Play();
             Destroy(other.gameObject);
             Debug.Log(mony);
         }
