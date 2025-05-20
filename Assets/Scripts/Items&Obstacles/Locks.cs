@@ -25,7 +25,7 @@ public class Locks : MonoBehaviour
 
         if (collectedKeys == 1)
         {
-            lock1.SetActive(false); 
+            lock1.SetActive(true); 
         }
         if (collectedKeys == 2)
         {
