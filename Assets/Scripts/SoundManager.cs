@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
+using UnityEngine.UIElements;
 public enum SoundType
 {
     STEPWOOD,
         BITE,
         ATTACK,
-        door,
+        DOOR,
         DEAD,
         DUST,
         KEY,
         LOCK,
+        PAUSE,
+        GAMEOVER
 }
-[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] soundlist;
+    [SerializeField] private SoundList[] soundlist;
    private static SoundManager instance;
     private AudioSource audioSource;
     private void Awake()
@@ -30,6 +33,26 @@ public class SoundManager : MonoBehaviour
     }
     public static void PlaySound(SoundType sound, float volume = 1)
     {
-        instance.audioSource.PlayOneShot(instance.soundlist[(int)sound], volume);
+        AudioClip[] clips = instance.soundlist[(int)sound].Sounds;
+        AudioClip randomclip = clips[UnityEngine.Random.Range(0, clips.Length)];
+        instance.audioSource.PlayOneShot(randomclip, volume);
+    }
+#if UNITY_EDITOR
+    private void OnEnable()
+    {
+        string[] names = Enum.GetNames(typeof(SoundType));
+        Array.Resize( ref soundlist, names.Length);
+        for (int i = 0; i < soundlist.Length; i++)
+        {
+            soundlist[i].name = names[i];
+        }
+    }
+#endif
+    [Serializable]
+    public struct SoundList
+    {
+        public AudioClip[] Sounds { get => sounds;  }
+        [HideInInspector] public string name;
+        [SerializeField] private AudioClip[] sounds;
     }
 }

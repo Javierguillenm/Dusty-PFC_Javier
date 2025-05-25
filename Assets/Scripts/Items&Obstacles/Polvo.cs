@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class Polvo : MonoBehaviour 
+public class Polvo : MonoBehaviour
 {
     [SerializeField] public int value;
-
+    
     
 }

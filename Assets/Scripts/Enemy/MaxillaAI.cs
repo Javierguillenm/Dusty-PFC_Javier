@@ -44,6 +44,8 @@ public class MaxillaAI : MonoBehaviour
         {
             agent.SetDestination(dusty.transform.position);
             anim.SetBool("Walk", true);
+            SoundManager.PlaySound(SoundType.STEPWOOD);
+
 
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance && atkReady)
             {
@@ -93,6 +95,8 @@ public class MaxillaAI : MonoBehaviour
             Instantiate(oKey, atkPoint.position, atkPoint.rotation);
             anim.SetTrigger("Ouch");
             agent.isStopped = true;
+            SoundManager.PlaySound(SoundType.DEAD);
+
             GetComponent<MaxillaAI>().enabled = false;
         }
     }
@@ -101,6 +105,8 @@ public class MaxillaAI : MonoBehaviour
         if (atkReady == false)
         {
             atkCooldown += Time.deltaTime;
+            SoundManager.PlaySound(SoundType.ATTACK);
+
 
             if (atkCooldown >= 3f)
             {

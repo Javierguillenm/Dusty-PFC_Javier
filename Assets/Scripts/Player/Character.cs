@@ -129,6 +129,7 @@ public class Character : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, Vector3.down, 1f, esSaltable))
         {
+            SoundManager.PlaySound(SoundType.STEPWOOD);
             anim.SetBool("Fall", false);
             if (movimientoY.y < 0)
             {
@@ -168,9 +169,8 @@ public class Character : MonoBehaviour
         }
         else
         {
-            SPD = 3;
-            
-        }
+            SPD = 3; 
+        }   
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -182,8 +182,8 @@ public class Character : MonoBehaviour
             }
             Polvo collectScript = other.gameObject.GetComponent<Polvo>(); 
             mony += collectScript.value;
-            SoundManager.PlaySound(SoundType.DUST, mony);
             Destroy(other.gameObject);
+            SoundManager.PlaySound(SoundType.DUST);
             Debug.Log(mony);
         }
         if (other.gameObject.CompareTag("Key"))
@@ -194,25 +194,25 @@ public class Character : MonoBehaviour
             if (key == 0)
             {
                 rKey = 1;
-                SoundManager.PlaySound(SoundType.KEY, mony);
+                SoundManager.PlaySound(SoundType.KEY);
 
             }
             else if (key == 1)
             {
                 oKey = 1;
-                SoundManager.PlaySound(SoundType.KEY, mony);
+                SoundManager.PlaySound(SoundType.KEY);
 
             }
             else if (key == 2)
             {
                 yKey = 1;
-                SoundManager.PlaySound(SoundType.KEY, mony);
+                SoundManager.PlaySound(SoundType.KEY);
 
             }
             else
             {
                 pKey = 1;
-                SoundManager.PlaySound(SoundType.KEY, mony);
+                SoundManager.PlaySound(SoundType.KEY);
 
             }
         }
@@ -229,7 +229,6 @@ public class Character : MonoBehaviour
                 controller.enabled = false;
                 GetComponent<Character>().enabled = false;
                 player.SetActive(false);    
-               
             }
 
         }
@@ -249,22 +248,16 @@ public class Character : MonoBehaviour
                     {
                         collsTocados[i].GetComponent<EnemyHPManager>().Ouch(weapon[weaponId].DMG + glassBonus);
                         Debug.Log("Boyoiyoiyoing");
-                        SoundManager.PlaySound(SoundType.ATTACK);
-
                     }
                     else if (weaponId == 3)
                     {
                         collsTocados[i].GetComponent<EnemyHPManager>().Ouch(weapon[weaponId].DMG + woodBonus);
-                        SoundManager.PlaySound(SoundType.ATTACK);
-
                         Debug.Log("Boyoiyoiyoing");
                     }
                     else
                     {
                         collsTocados[i].GetComponent<EnemyHPManager>().Ouch(weapon[weaponId].DMG);
                         Debug.Log("Boyoiyoiyoing");
-                        SoundManager.PlaySound(SoundType.ATTACK);
-
                     }
                     if (weaponId != 0)
                     {

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TemporaryDoors : MonoBehaviour
 {
-    public AudioSource PuertaOpen;
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject wall;
@@ -17,8 +16,9 @@ public class TemporaryDoors : MonoBehaviour
         {
             wall.SetActive(false);
             door.SetActive(false);
-            PuertaOpen.Play();
+            SoundManager.PlaySound(SoundType.DOOR);
             anim.SetTrigger("Open");
+            
         }
     }
 }

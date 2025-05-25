@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentHp;
     [SerializeField] private int reorder;
     // Start is called before the first frame update
+    
     void Awake()
     {
         currentW = 0;
@@ -172,6 +173,7 @@ public class GameManager : MonoBehaviour
         {
             menu.SetActive(true);
             hud.SetActive(false);
+            SoundManager.PlaySound(SoundType.PAUSE);
             menuOn = true;
             hue.SetActive(true);
         }
@@ -179,6 +181,7 @@ public class GameManager : MonoBehaviour
         {
             menu.SetActive(false);
             hud.SetActive(true);
+            SoundManager.PlaySound(SoundType.PAUSE);
             menuOn = false;
             hue.SetActive(false);
         }
@@ -189,6 +192,7 @@ public class GameManager : MonoBehaviour
         {
             upgradeMenu.SetActive(true);
             hud.SetActive(false);
+            SoundManager.PlaySound(SoundType.PAUSE);
             upgradeOn = true;
             hue.SetActive(true);
         }
@@ -196,6 +200,7 @@ public class GameManager : MonoBehaviour
         {
             upgradeMenu.SetActive(false);
             hud.SetActive(true);
+            SoundManager.PlaySound(SoundType.PAUSE);
             upgradeOn = false;
             hue.SetActive(false);
         }
@@ -362,6 +367,7 @@ public class GameManager : MonoBehaviour
         if (currentHp == 0)
         {
             deathMenu.SetActive(true);
+            SoundManager.PlaySound(SoundType.GAMEOVER);
             hue.SetActive(true);    
         }
     }
