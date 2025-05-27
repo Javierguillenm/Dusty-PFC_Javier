@@ -22,6 +22,7 @@ public enum SoundType
         WEAPONBREAK,
         MAXILLADEAD,
         MAXILLASOUND,
+        MAXILLASEESPLAYER,
         MANUSIDLESOUND,
         MANUSSEESPLAYER,
         MANUSATTACK,

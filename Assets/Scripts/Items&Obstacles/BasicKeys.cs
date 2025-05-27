@@ -11,7 +11,6 @@ public class BasicKeys : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             player.GetComponent<Character>().basicKeys++;
-            SoundManager.PlaySound(SoundType.KEY);
 
             Destroy(gameObject);
         }

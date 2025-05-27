@@ -40,6 +40,8 @@ public class ManusAI : MonoBehaviour
     }
     void PlayerNoticed()
     {
+        SoundManager.PlaySound(SoundType.MANUSSEESPLAYER);
+
         if (noticed)
         {
             agent.SetDestination(dusty.transform.position);
@@ -55,6 +57,8 @@ public class ManusAI : MonoBehaviour
     }
     private void Atk()
     {
+        SoundManager.PlaySound(SoundType.MANUSATTACK);
+
         agent.isStopped = true;
         Collider[] collsTocados = Physics.OverlapSphere(atkPoint.position, atRadius, isPlayer);
         if (collsTocados.Length > 0)
@@ -93,6 +97,7 @@ public class ManusAI : MonoBehaviour
             Instantiate(yKey, atkPoint.position, atkPoint.rotation);
             anim.SetTrigger("Ouch");
             agent.isStopped = true;
+     SoundManager.PlaySound(SoundType.MANUSDEAD);
             GetComponent<ManusAI>().enabled = false;
         }
     }

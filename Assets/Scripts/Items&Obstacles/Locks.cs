@@ -41,7 +41,6 @@ public class Locks : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && win)
         {
-            SoundManager.PlaySound(SoundType.LOCK);
 
             gm.GetComponent<GameManager>().Win();
         }

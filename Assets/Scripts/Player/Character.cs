@@ -1,7 +1,9 @@
+using SmallHedge.SoundManager;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class Character : MonoBehaviour
 {
@@ -37,6 +39,7 @@ public class Character : MonoBehaviour
     private Vector3 movimientoY;
     [SerializeField] private WeaponsSO[] weapon;
     [SerializeField] public int weaponId;
+    [SerializeField] private SoundsSO[] sounds;
     public int rKey;
     public int oKey;
     public int yKey;

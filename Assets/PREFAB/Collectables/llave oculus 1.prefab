@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 5803731038330450465}
   m_Layer: 0
   m_Name: llave oculus 1
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6752057889357630640
 Transform:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6fe72c3688b02b4e8cd790658303ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 3890028920807039274}
 --- !u!135 &5803731038330450465
 SphereCollider:
   m_ObjectHideFlags: 0

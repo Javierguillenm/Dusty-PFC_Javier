@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using static Unity.VisualScripting.Member;
 
 public class OculusAI : MonoBehaviour
 {
@@ -42,6 +43,8 @@ public class OculusAI : MonoBehaviour
     void PlayerNoticed()
     {
         if (noticed)
+          
+
         {
             agent.SetDestination(dusty.transform.position);
             anim.SetBool("Walk", true);
@@ -57,6 +60,7 @@ public class OculusAI : MonoBehaviour
     private void Atk()
     {
         agent.isStopped = true;
+
         Collider[] collsTocados = Physics.OverlapSphere(atkPoint.position, atRadius, isPlayer);
         if (collsTocados.Length > 0)
         {
@@ -72,6 +76,7 @@ public class OculusAI : MonoBehaviour
         if (agent.remainingDistance >= agent.stoppingDistance)
         {
             agent.isStopped = false;
+
         }
     }
     private void OnDrawGizmos()
@@ -92,6 +97,7 @@ public class OculusAI : MonoBehaviour
     {
         if (HP <= 0)
         {
+
             Instantiate(rKey,atkPoint.position, atkPoint.rotation);
             anim.SetTrigger("Ouch");
             agent.isStopped = true;
