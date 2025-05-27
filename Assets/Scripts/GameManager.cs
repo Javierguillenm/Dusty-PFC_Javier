@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentHp;
     [SerializeField] private int reorder;
     // Start is called before the first frame update
-    
     void Awake()
     {
         currentW = 0;
@@ -137,6 +136,8 @@ public class GameManager : MonoBehaviour
     {
         if (glassLv < 4 && character.mony >= glassCost)
         {
+            SoundManager.PlaySound(SoundType.MENUBUTTONS);
+
             character.mony -= glassCost;
             character.glassBonus += 2;
             glassLv++;
@@ -148,7 +149,10 @@ public class GameManager : MonoBehaviour
     public void OnClickMetalDurabilityUpButton()
     {
         if (metalLv < 4 && character.mony >= metalCost)
+
         {
+            SoundManager.PlaySound(SoundType.MENUBUTTONS);
+
             character.mony -= metalCost;
             character.metalBonus += 2;
             metalLv++;
@@ -160,6 +164,7 @@ public class GameManager : MonoBehaviour
     {
         if (woodLv < 4 && character.mony >= woodCost)
         {
+            SoundManager.PlaySound(SoundType.MENUBUTTONS);
             character.mony -= woodCost;
             character.woodBonus++;
             woodLv++;
@@ -171,28 +176,33 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.I) && menuOn == false && upgradeOn == false)
         {
+            SoundManager.PlaySound(SoundType.PAUSE);
+
             menu.SetActive(true);
             hud.SetActive(false);
-            SoundManager.PlaySound(SoundType.PAUSE);
             menuOn = true;
             hue.SetActive(true);
         }
         else if(Input.GetKeyDown(KeyCode.I) && menuOn == true && upgradeOn == false)
         {
+            SoundManager.PlaySound(SoundType.MENUBUTTONS);
+
             menu.SetActive(false);
             hud.SetActive(true);
-            SoundManager.PlaySound(SoundType.PAUSE);
             menuOn = false;
             hue.SetActive(false);
+            SoundManager.PlaySound(SoundType.PAUSE);
+
         }
     }
     private void UpgradeMenu()
     {
         if (Input.GetKeyDown(KeyCode.U) && upgradeOn == false && menuOn == false)
         {
+            SoundManager.PlaySound(SoundType.MENUBUTTONS);
+
             upgradeMenu.SetActive(true);
             hud.SetActive(false);
-            SoundManager.PlaySound(SoundType.PAUSE);
             upgradeOn = true;
             hue.SetActive(true);
         }
@@ -200,7 +210,6 @@ public class GameManager : MonoBehaviour
         {
             upgradeMenu.SetActive(false);
             hud.SetActive(true);
-            SoundManager.PlaySound(SoundType.PAUSE);
             upgradeOn = false;
             hue.SetActive(false);
         }
@@ -247,6 +256,7 @@ public class GameManager : MonoBehaviour
     }
     private void HPIcons()
     {
+        SoundManager.PlaySound(SoundType.MENUBUTTONS);
 
         if (currentHp == 3)
         {
@@ -323,16 +333,22 @@ public class GameManager : MonoBehaviour
             currentW = 0;
             weaponSO[currentW].durability = weaponSO[currentW].maxDurability;
             weapons[0].SetActive(true);
+
         }
         if (Input.GetKeyDown(KeyCode.Alpha1) && currentW != 1)
         {
+            SoundManager.PlaySound(SoundType.ATTACKGLASS);
+
             weapons[currentW].SetActive(false);
             currentW = 1;
             weaponSO[currentW].durability = weaponSO[currentW].maxDurability;
             weapons[1].SetActive(true);
+
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && currentW != 2)
         {
+            SoundManager.PlaySound(SoundType.ATTACKMETAL);
+
             weapons[currentW].SetActive(false);
             currentW = 2;
             weaponSO[currentW].durability = weaponSO[currentW].maxDurability + character.metalBonus;
@@ -340,6 +356,8 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && currentW != 3)
         {
+            SoundManager.PlaySound(SoundType.ATTACKWOOD);
+
             weapons[currentW].SetActive(false);
             currentW = 3;
             weaponSO[currentW].durability = weaponSO[currentW].maxDurability + character.woodBonus;
@@ -352,6 +370,8 @@ public class GameManager : MonoBehaviour
         {
             weapons[currentW].SetActive(false);
             currentW = 0;
+            SoundManager.PlaySound(SoundType.WEAPONBREAK);
+
             weapons[0].SetActive(true);
         }
     }
@@ -366,8 +386,9 @@ public class GameManager : MonoBehaviour
     {
         if (currentHp == 0)
         {
+            SoundManager.PlaySound(SoundType.DEAD);
+
             deathMenu.SetActive(true);
-            SoundManager.PlaySound(SoundType.GAMEOVER);
             hue.SetActive(true);    
         }
     }

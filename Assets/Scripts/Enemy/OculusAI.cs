@@ -58,8 +58,6 @@ public class OculusAI : MonoBehaviour
     {
         agent.isStopped = true;
         Collider[] collsTocados = Physics.OverlapSphere(atkPoint.position, atRadius, isPlayer);
-        SoundManager.PlaySound(SoundType.ATTACK);
-
         if (collsTocados.Length > 0)
         {
             collsTocados[0].GetComponent<Character>().Ouch();
@@ -96,8 +94,6 @@ public class OculusAI : MonoBehaviour
         {
             Instantiate(rKey,atkPoint.position, atkPoint.rotation);
             anim.SetTrigger("Ouch");
-            SoundManager.PlaySound(SoundType.DEAD);
-
             agent.isStopped = true;
             GetComponent<OculusAI>().enabled = false;
         } 

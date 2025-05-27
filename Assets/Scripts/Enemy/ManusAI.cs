@@ -42,6 +42,7 @@ public class ManusAI : MonoBehaviour
     {
         if (noticed)
         {
+            agent.SetDestination(dusty.transform.position);
             anim.SetBool("Walk", true);
 
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance && atkReady)
@@ -81,7 +82,7 @@ public class ManusAI : MonoBehaviour
     {
         PlayerNoticed();
         Oof();
-        ATKReady(dusty);
+        ATKReady();
         HP = hPManager.HP;
     }
 
@@ -92,17 +93,14 @@ public class ManusAI : MonoBehaviour
             Instantiate(yKey, atkPoint.position, atkPoint.rotation);
             anim.SetTrigger("Ouch");
             agent.isStopped = true;
-            SoundManager.PlaySound(SoundType.DEAD);
-
             GetComponent<ManusAI>().enabled = false;
         }
     }
-    void ATKReady(Character dusty)
+    void ATKReady()
     {
         if (atkReady == false)
         {
             atkCooldown += Time.deltaTime;
-            SoundManager.PlaySound(SoundType.ATTACK);
 
             if (atkCooldown >= 3f)
             {

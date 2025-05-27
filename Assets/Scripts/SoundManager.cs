@@ -7,14 +7,29 @@ public enum SoundType
 {
     STEPWOOD,
         BITE,
-        ATTACK,
+        ATTACKGLASS,
+        ATTACKWOOD,
+        ATTACKMETAL,
         DOOR,
+        JUMP,
+        MENUBUTTONS,
         DEAD,
         DUST,
         KEY,
         LOCK,
         PAUSE,
-        GAMEOVER
+        GAMEOVER,
+        WEAPONBREAK,
+        MAXILLADEAD,
+        MAXILLASOUND,
+        MANUSIDLESOUND,
+        MANUSSEESPLAYER,
+        MANUSATTACK,
+        MANUSDEAD,
+        OCULUSATTACK,
+        OCULUSSEESPLAYER,
+        OCULUSDEAD
+
 }
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 public class SoundManager : MonoBehaviour

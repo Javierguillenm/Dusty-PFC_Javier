@@ -25,21 +25,15 @@ public class Locks : MonoBehaviour
 
         if (collectedKeys == 1)
         {
-            lock1.SetActive(false);
-            SoundManager.PlaySound(SoundType.LOCK);
-
+            lock1.SetActive(false); 
         }
         if (collectedKeys == 2)
         {
             lock2.SetActive(false);
-            SoundManager.PlaySound(SoundType.LOCK);
-
         }
         if (collectedKeys == 3)
         {
             lock3.SetActive(false);
-            SoundManager.PlaySound(SoundType.LOCK);
-
             win = true; 
         }
     }
@@ -47,6 +41,8 @@ public class Locks : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && win)
         {
+            SoundManager.PlaySound(SoundType.LOCK);
+
             gm.GetComponent<GameManager>().Win();
         }
     }

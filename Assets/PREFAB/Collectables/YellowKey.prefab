@@ -27,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7449443387278246092}
-  m_LocalRotation: {x: -0.9999516, y: -0.009836269, z: 0.000000014364037, w: 0.0000014602431}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.17451763, y: 3.17, z: 11.447}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -180, y: 0, z: -1.1270142}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6594877836096771539
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -64,7 +64,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 3394576439930006248, guid: 7ad0dcb5516413a4bbb7643168a27af8, type: 3}
-  - {fileID: 2100000, guid: 77d8e76579ae5c24681d871b368dedb6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df3094981ff13947a21d67d773b8ac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyId: 1
+  keyId: 2
 --- !u!135 &7449443387278246094
 SphereCollider:
   m_ObjectHideFlags: 0

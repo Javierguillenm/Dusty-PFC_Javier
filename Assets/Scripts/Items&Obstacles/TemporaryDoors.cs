@@ -14,11 +14,11 @@ public class TemporaryDoors : MonoBehaviour
     {
         if (other.CompareTag("Player") && player.GetComponent<Character>().basicKeys >= keysNeeded)
         {
+       
             wall.SetActive(false);
-            door.SetActive(false);
-            SoundManager.PlaySound(SoundType.DOOR);
+            door.SetActive(false);   
             anim.SetTrigger("Open");
-            
+            SoundManager.PlaySound(SoundType.DOOR);
         }
     }
 }
