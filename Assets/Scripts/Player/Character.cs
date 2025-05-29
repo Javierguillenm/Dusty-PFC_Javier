@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static Unity.VisualScripting.Member;
 
 public class Character : MonoBehaviour
@@ -40,6 +41,8 @@ public class Character : MonoBehaviour
     [SerializeField] private WeaponsSO[] weapon;
     [SerializeField] public int weaponId;
     [SerializeField] private SoundsSO[] sounds;
+    private Vector2 moveInput;
+    private Vector2 lookInput;
     public int rKey;
     public int oKey;
     public int yKey;
@@ -165,15 +168,15 @@ public class Character : MonoBehaviour
         }
     }
     void Correr()
-    {      
+    {
         if (Input.GetKey(KeyCode.X))
         {
             SPD = 6;
         }
         else
         {
-            SPD = 3; 
-        }   
+            SPD = 3;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -183,7 +186,7 @@ public class Character : MonoBehaviour
             {
                 HP++;
             }
-            Polvo collectScript = other.gameObject.GetComponent<Polvo>(); 
+            Polvo collectScript = other.gameObject.GetComponent<Polvo>();
             mony += collectScript.value;
             SoundManager.PlaySound(SoundType.DUST);
 
@@ -222,10 +225,10 @@ public class Character : MonoBehaviour
             Debug.Log("Ouch");
             if (HP == 0)
             {
-                anim.enabled = false;   
+                anim.enabled = false;
                 controller.enabled = false;
                 GetComponent<Character>().enabled = false;
-                player.SetActive(false);    
+                player.SetActive(false);
             }
 
         }
@@ -272,5 +275,5 @@ public class Character : MonoBehaviour
     {
         Gizmos.DrawWireSphere(atkP.position, range);
     }
-
+  
 }

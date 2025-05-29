@@ -1,3 +1,4 @@
+using SmallHedge.SoundManager;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,6 +13,8 @@ public class OculusAI : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] public Character dusty;
     [SerializeField] Collider[] sight;
+    [SerializeField] public PlaySoundExit playSoundExit;
+    [SerializeField] public PlaySoundEnter playSoundEnter;
     private bool noticed;
     private NavMeshAgent agent;
 
@@ -60,7 +63,7 @@ public class OculusAI : MonoBehaviour
     private void Atk()
     {
         agent.isStopped = true;
-
+       // SoundList.Play()
         Collider[] collsTocados = Physics.OverlapSphere(atkPoint.position, atRadius, isPlayer);
         if (collsTocados.Length > 0)
         {
