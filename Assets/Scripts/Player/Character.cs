@@ -188,7 +188,7 @@ public class Character : MonoBehaviour
             }
             Polvo collectScript = other.gameObject.GetComponent<Polvo>();
             mony += collectScript.value;
-            SoundManager.PlaySound(SoundType.DUST);
+           
 
             Destroy(other.gameObject);
             Debug.Log(mony);
