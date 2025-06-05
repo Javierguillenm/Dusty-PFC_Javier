@@ -12,4 +12,124 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08acba384f960d0499baf560a190f2c9, type: 3}
   m_Name: Sounds SO
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: STEPWOOD
+    volume: 1
+    mixer: {fileID: 24300002, guid: 3dbae12a582c2b74b8287482a248436b, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 93aaaf416820f91498e7abc03d4ddd0a, type: 3}
+  - name: BITE
+    volume: 1
+    mixer: {fileID: 24300002, guid: 0772ab66b7a6974419da13a4dbc2cd05, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: e27b38d5761851b4195c0f8beddb05a7, type: 3}
+  - name: ATTACKGLASS
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 83c979e68347322448c25a969ce70659, type: 3}
+  - name: ATAACKWOOD
+    volume: 1
+    mixer: {fileID: 24300002, guid: cfcb6ca232879434eb0cf799a43a7b66, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 62710cf9820e82b4a9ee07e4af0d1e89, type: 3}
+  - name: ATTACKMETAL
+    volume: 1
+    mixer: {fileID: 24300002, guid: cfcb6ca232879434eb0cf799a43a7b66, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: ac29e3dc033c1fd44ae3b04cf8c30160, type: 3}
+  - name: MENU
+    volume: 1
+    mixer: {fileID: 24300002, guid: c72f2a58b5e08a24cac89519a252b9ea, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: fd1e1d35053ebce4aaf4f50744c85468, type: 3}
+  - name: KEY
+    volume: 1
+    mixer: {fileID: 24300002, guid: 021f63a4eec6239469711fa1fcf070e2, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 9c8e50e007060cb40bf615c78bffb386, type: 3}
+  - name: DEAD
+    volume: 1
+    mixer: {fileID: 24300002, guid: 3dbae12a582c2b74b8287482a248436b, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 827380576bfa57042bc03043c268c9a6, type: 3}
+  - name: DUST
+    volume: 1
+    mixer: {fileID: 24300002, guid: 576c752d91e6f8a4d9c7bfae88a8233f, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: c6a856440f9166b469b80fffb0912393, type: 3}
+  - name: DOOR
+    volume: 1
+    mixer: {fileID: 24300002, guid: 530a1735c434b90418d8863e8c2c2a19, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 878e76250e1371741a04cb46b077396a, type: 3}
+  - name: JUMP
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: f511773021c4a5a4686e6ede91f197e7, type: 3}
+  - name: MENUBUTTONS
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: fd1e1d35053ebce4aaf4f50744c85468, type: 3}
+  - name: PAUSE
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: fd1e1d35053ebce4aaf4f50744c85468, type: 3}
+  - name: LOCK
+    volume: 1
+    mixer: {fileID: 24300002, guid: 021f63a4eec6239469711fa1fcf070e2, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: b54255660c8bc5a4aa7c32b373db2c8b, type: 3}
+  - name: MAXILLAIDLE
+    volume: 1
+    mixer: {fileID: 24300002, guid: 0772ab66b7a6974419da13a4dbc2cd05, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 5d558f06faf33ee4bb2bae3b89ccbe58, type: 3}
+  - name: MAXILLANOTICE
+    volume: 1
+    mixer: {fileID: 24300002, guid: 0772ab66b7a6974419da13a4dbc2cd05, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 8e4178153440a1c49837513ecc53773b, type: 3}
+  - name: OCULUSNOTICE
+    volume: 1
+    mixer: {fileID: 24300002, guid: 0772ab66b7a6974419da13a4dbc2cd05, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 8e4178153440a1c49837513ecc53773b, type: 3}
+  - name: OCULUSIDLE
+    volume: 1
+    mixer: {fileID: 24300002, guid: 0772ab66b7a6974419da13a4dbc2cd05, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 2351aa6713e63724cb8d060061d0eb0e, type: 3}
+  - name: OCULUSATTACK
+    volume: 1
+    mixer: {fileID: 24300002, guid: 0772ab66b7a6974419da13a4dbc2cd05, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 9dd92cd50ba927e4ca36940ced92a4bc, type: 3}
+  - name: WEAPONBREAK
+    volume: 1
+    mixer: {fileID: 24300002, guid: cfcb6ca232879434eb0cf799a43a7b66, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: c75176cac64b3da4aaac3c9bee9dbe9e, type: 3}
+  - name: MAXILLAATTACK
+    volume: 1
+    mixer: {fileID: 24300002, guid: 0772ab66b7a6974419da13a4dbc2cd05, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 174ead0ba85e66042b539cd4f6428200, type: 3}
+  - name: MANUSIDLE
+    volume: 1
+    mixer: {fileID: 24300002, guid: 0772ab66b7a6974419da13a4dbc2cd05, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 95f07de0d8bbefb4aa3b3588b52ea53d, type: 3}
+  - name: MANUSATTACK
+    volume: 1
+    mixer: {fileID: 24300002, guid: 0772ab66b7a6974419da13a4dbc2cd05, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 174ead0ba85e66042b539cd4f6428200, type: 3}
+  - name: MANUSDEAD
+    volume: 1
+    mixer: {fileID: 24300002, guid: 0772ab66b7a6974419da13a4dbc2cd05, type: 2}
+    sounds:
+    - {fileID: 8300000, guid: 827380576bfa57042bc03043c268c9a6, type: 3}

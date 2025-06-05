@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using SmallHedge.SoundManager;
 
 public class GameManager : MonoBehaviour
 {
@@ -136,7 +137,7 @@ public class GameManager : MonoBehaviour
     {
         if (glassLv < 4 && character.mony >= glassCost)
         {
-            SoundManager.PlaySound(SoundType.MENUBUTTONS);
+          SoundManager.PlaySound(SoundType.MENUBUTTONS);
 
             character.mony -= glassCost;
             character.glassBonus += 2;
@@ -151,7 +152,7 @@ public class GameManager : MonoBehaviour
         if (metalLv < 4 && character.mony >= metalCost)
 
         {
-            SoundManager.PlaySound(SoundType.MENUBUTTONS);
+        SoundManager.PlaySound(SoundType.MENUBUTTONS);
 
             character.mony -= metalCost;
             character.metalBonus += 2;
@@ -200,6 +201,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U) && upgradeOn == false && menuOn == false)
         {
             SoundManager.PlaySound(SoundType.MENUBUTTONS);
+     
 
             upgradeMenu.SetActive(true);
             hud.SetActive(false);
@@ -256,7 +258,6 @@ public class GameManager : MonoBehaviour
     }
     private void HPIcons()
     {
-        SoundManager.PlaySound(SoundType.MENUBUTTONS);
 
         if (currentHp == 3)
         {
@@ -347,7 +348,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2) && currentW != 2)
         {
-            SoundManager.PlaySound(SoundType.ATTACKMETAL);
+           SoundManager.PlaySound(SoundType.ATTACKMETAL);
 
             weapons[currentW].SetActive(false);
             currentW = 2;
@@ -356,7 +357,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) && currentW != 3)
         {
-            SoundManager.PlaySound(SoundType.ATTACKWOOD);
+          SoundManager.PlaySound(SoundType.ATAACKWOOD);
 
             weapons[currentW].SetActive(false);
             currentW = 3;
@@ -370,7 +371,7 @@ public class GameManager : MonoBehaviour
         {
             weapons[currentW].SetActive(false);
             currentW = 0;
-            SoundManager.PlaySound(SoundType.WEAPONBREAK);
+           SoundManager.PlaySound(SoundType.WEAPONBREAK);
 
             weapons[0].SetActive(true);
         }

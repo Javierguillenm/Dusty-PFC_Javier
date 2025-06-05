@@ -3778,7 +3778,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461062351}
-  m_LocalRotation: {x: 0.0562248, y: 0.000000017179165, z: -9.674257e-10, w: 0.99841815}
+  m_LocalRotation: {x: 0.0562248, y: -0.000000017179161, z: 9.674255e-10, w: 0.99841815}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4740,8 +4740,6 @@ MonoBehaviour:
   dusty: {fileID: 969973154}
   sight:
   - {fileID: 497363064}
-  playSoundExit: {fileID: 0}
-  playSoundEnter: {fileID: 0}
   SPD: 1
   atkPoint: {fileID: 1783473197}
   atRadius: 0.7
@@ -8172,7 +8170,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865963973}
-  m_LocalRotation: {x: 0.038102787, y: -0.000000017327691, z: 6.607131e-10, w: 0.99927384}
+  m_LocalRotation: {x: 0.038102787, y: 0.000000017327691, z: -6.607131e-10, w: 0.99927384}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8558,7 +8556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1728900127256373531, guid: 4bcdf97af7bfa8042b9c5f64bb8c0e86, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26951844
+      value: 0.2753
       objectReference: {fileID: 0}
     - target: {fileID: 1728900127256373531, guid: 4bcdf97af7bfa8042b9c5f64bb8c0e86, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9090,7 +9088,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.0562248, y: 0.00000003435833, z: -0.0000000019348507, w: 0.99841815}
+  m_LocalRotation: {x: 0.0562248, y: -0.00000003435833, z: 0.0000000019348507, w: 0.99841815}
   m_LocalPosition: {x: 0.96700037, y: 3.5370002, z: -5.8889985}
   m_LocalScale: {x: 0.22216, y: 0.22216, z: 0.22216}
   m_ConstrainProportionsScale: 0
@@ -11822,7 +11820,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1273650717}
-  - component: {fileID: 1273650718}
   m_Layer: 7
   m_Name: polvo
   m_TagString: Untagged
@@ -11838,7 +11835,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273650716}
   m_LocalRotation: {x: -0, y: -0.28680024, z: -0, w: 0.9579904}
-  m_LocalPosition: {x: -70.8, y: 1.44, z: -30.5}
+  m_LocalPosition: {x: -70.8, y: 1.49, z: -30.5}
   m_LocalScale: {x: 1.23, y: 1.23, z: 1.23}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11911,22 +11908,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1273650718
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273650716}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 1.1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
 --- !u!1 &1275756027
 GameObject:
   m_ObjectHideFlags: 0
@@ -17561,7 +17542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1926606366}
   - component: {fileID: 1926606365}
-  - component: {fileID: 1926606364}
+  - component: {fileID: 1926606367}
   m_Layer: 5
   m_Name: Sound Effects
   m_TagString: Untagged
@@ -17569,94 +17550,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1926606364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926606363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be90befbcca03e549a302d97a4bae479, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundlist:
-  - name: STEPWOOD
-    sounds:
-    - {fileID: 8300000, guid: 93aaaf416820f91498e7abc03d4ddd0a, type: 3}
-  - name: BITE
-    sounds:
-    - {fileID: 8300000, guid: e27b38d5761851b4195c0f8beddb05a7, type: 3}
-  - name: ATTACKGLASS
-    sounds:
-    - {fileID: 8300000, guid: 83c979e68347322448c25a969ce70659, type: 3}
-  - name: ATTACKWOOD
-    sounds:
-    - {fileID: 8300000, guid: 62710cf9820e82b4a9ee07e4af0d1e89, type: 3}
-  - name: ATTACKMETAL
-    sounds:
-    - {fileID: 8300000, guid: ac29e3dc033c1fd44ae3b04cf8c30160, type: 3}
-  - name: DOOR
-    sounds:
-    - {fileID: 8300000, guid: 878e76250e1371741a04cb46b077396a, type: 3}
-  - name: JUMP
-    sounds:
-    - {fileID: 8300000, guid: f511773021c4a5a4686e6ede91f197e7, type: 3}
-  - name: MENUBUTTONS
-    sounds:
-    - {fileID: 8300000, guid: f511773021c4a5a4686e6ede91f197e7, type: 3}
-  - name: DEAD
-    sounds:
-    - {fileID: 8300000, guid: 827380576bfa57042bc03043c268c9a6, type: 3}
-  - name: DUST
-    sounds:
-    - {fileID: 8300000, guid: c6a856440f9166b469b80fffb0912393, type: 3}
-  - name: KEY
-    sounds:
-    - {fileID: 8300000, guid: 9c8e50e007060cb40bf615c78bffb386, type: 3}
-  - name: LOCK
-    sounds:
-    - {fileID: 8300000, guid: b54255660c8bc5a4aa7c32b373db2c8b, type: 3}
-  - name: PAUSE
-    sounds:
-    - {fileID: 8300000, guid: fd1e1d35053ebce4aaf4f50744c85468, type: 3}
-  - name: GAMEOVER
-    sounds:
-    - {fileID: 8300000, guid: 56cb50c60f813eb42bd32dc723256233, type: 3}
-  - name: WEAPONBREAK
-    sounds:
-    - {fileID: 8300000, guid: c75176cac64b3da4aaac3c9bee9dbe9e, type: 3}
-  - name: MAXILLADEAD
-    sounds:
-    - {fileID: 8300000, guid: 827380576bfa57042bc03043c268c9a6, type: 3}
-  - name: MAXILLASOUND
-    sounds:
-    - {fileID: 8300000, guid: 2351aa6713e63724cb8d060061d0eb0e, type: 3}
-  - name: MAXILLASEESPLAYER
-    sounds:
-    - {fileID: 8300000, guid: 8e4178153440a1c49837513ecc53773b, type: 3}
-  - name: MANUSIDLESOUND
-    sounds:
-    - {fileID: 8300000, guid: 2351aa6713e63724cb8d060061d0eb0e, type: 3}
-  - name: MANUSSEESPLAYER
-    sounds:
-    - {fileID: 8300000, guid: 8e4178153440a1c49837513ecc53773b, type: 3}
-  - name: MANUSATTACK
-    sounds:
-    - {fileID: 8300000, guid: 174ead0ba85e66042b539cd4f6428200, type: 3}
-  - name: MANUSDEAD
-    sounds:
-    - {fileID: 8300000, guid: 827380576bfa57042bc03043c268c9a6, type: 3}
-  - name: OCULUSATTACK
-    sounds:
-    - {fileID: 8300000, guid: 9dd92cd50ba927e4ca36940ced92a4bc, type: 3}
-  - name: OCULUSSEESPLAYER
-    sounds:
-    - {fileID: 8300000, guid: 8e4178153440a1c49837513ecc53773b, type: 3}
-  - name: OCULUSDEAD
-    sounds:
-    - {fileID: 8300000, guid: 827380576bfa57042bc03043c268c9a6, type: 3}
 --- !u!82 &1926606365
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17668,8 +17561,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.137
+  m_PlayOnAwake: 1
+  m_Volume: 0.322
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -17768,6 +17661,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1926606367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926606363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fc64029aeaa574eaf7896d030640d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SO: {fileID: 11400000, guid: afe2bc22b57c47e4aadd7855314999f4, type: 2}
 --- !u!1001 &1929014235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18846,7 +18752,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034251246}
-  m_LocalRotation: {x: 0.07437622, y: 3.5330337e-15, z: -3.064301e-16, w: 0.9972303}
+  m_LocalRotation: {x: 0.07437619, y: -0.000000029719779, z: 0.0000000022165831, w: 0.9972303}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -117926,7 +117832,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7773577978136636173, guid: 67732409ab44f6d48a37f54c85f6e17d, type: 3}
+  - {fileID: 2100000, guid: 5dbdbbacf447bba48937b949881f6593, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -7,6 +7,34 @@ using UnityEngine.Audio;
 
 namespace SmallHedge.SoundManager
 {
+  
+    public enum SoundType
+    {
+        STEPWOOD,
+        BITE,
+        ATTACKGLASS,
+        ATAACKWOOD,
+        ATTACKMETAL,
+        MENU,
+        KEY,
+        DEAD,
+        DUST,
+        DOOR,
+        JUMP,
+        MENUBUTTONS,
+        PAUSE,
+        LOCK,
+        MAXILLAIDLE,
+        MAXILLANOTICE,
+        OCULUSNOTICE,
+        OCULUSIDLE,
+        OCULUSATTACK,
+        WEAPONBREAK,
+        MAXILLAATTACK,
+        MANUSIDLE,
+        MANUSATTACK,
+        MANUSDEAD,
+    }
     [RequireComponent(typeof(AudioSource))]
     public class SoundManager : MonoBehaviour
     {
@@ -28,19 +56,19 @@ namespace SmallHedge.SoundManager
             SoundList soundList = instance.SO.sounds[(int)sound];
             AudioClip[] clips = soundList.sounds;
             AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
+            instance.audioSource.PlayOneShot(randomClip, volume);
 
-            if(source)
-            {
-                source.outputAudioMixerGroup = soundList.mixer;
-                source.clip = randomClip;
-                source.volume = volume * soundList.volume;
-                source.Play();
-            }
-            else
-            {
-                instance.audioSource.outputAudioMixerGroup = soundList.mixer;
-                instance.audioSource.PlayOneShot(randomClip, volume * soundList.volume);
-            }
+           // if(source)
+         //   {
+             //   source.outputAudioMixerGroup = soundList.mixer;
+             //   source.clip = randomClip;
+            //    source.volume = volume * soundList.volume;
+           //     source.Play();
+       //     }
+          //  else
+          //  {
+         //       instance.audioSource.outputAudioMixerGroup = soundList.mixer;
+         //   }
         }
     }
 

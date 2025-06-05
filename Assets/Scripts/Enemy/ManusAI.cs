@@ -1,3 +1,4 @@
+using SmallHedge.SoundManager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,7 +41,7 @@ public class ManusAI : MonoBehaviour
     }
     void PlayerNoticed()
     {
-        SoundManager.PlaySound(SoundType.MANUSSEESPLAYER);
+       SoundManager.PlaySound(SoundType.MANUSIDLE);
 
         if (noticed)
         {
@@ -97,7 +98,7 @@ public class ManusAI : MonoBehaviour
             Instantiate(yKey, atkPoint.position, atkPoint.rotation);
             anim.SetTrigger("Ouch");
             agent.isStopped = true;
-     SoundManager.PlaySound(SoundType.MANUSDEAD);
+            SoundManager.PlaySound(SoundType.MANUSDEAD);
             GetComponent<ManusAI>().enabled = false;
         }
     }

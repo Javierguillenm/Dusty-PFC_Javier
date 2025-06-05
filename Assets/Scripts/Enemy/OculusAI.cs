@@ -13,8 +13,7 @@ public class OculusAI : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] public Character dusty;
     [SerializeField] Collider[] sight;
-    [SerializeField] public PlaySoundExit playSoundExit;
-    [SerializeField] public PlaySoundEnter playSoundEnter;
+    
     private bool noticed;
     private NavMeshAgent agent;
 
@@ -51,6 +50,7 @@ public class OculusAI : MonoBehaviour
         {
             agent.SetDestination(dusty.transform.position);
             anim.SetBool("Walk", true);
+            SoundManager.PlaySound(SoundType.OCULUSNOTICE);
 
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
@@ -63,7 +63,7 @@ public class OculusAI : MonoBehaviour
     private void Atk()
     {
         agent.isStopped = true;
-       // SoundList.Play()
+        SoundManager.PlaySound(SoundType.OCULUSATTACK);
         Collider[] collsTocados = Physics.OverlapSphere(atkPoint.position, atRadius, isPlayer);
         if (collsTocados.Length > 0)
         {
