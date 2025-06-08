@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5337fd4e02697c947b7a58aed0208387, type: 3}
   m_Name: Metal
   m_EditorClassIdentifier: 
-  DMG: 1134
+  DMG: 40
   durability: 15
   maxDurability: 15
