@@ -50,7 +50,7 @@ public class OculusAI : MonoBehaviour
         {
             agent.SetDestination(dusty.transform.position);
             anim.SetBool("Walk", true);
-            SoundManager.PlaySound(SoundType.OCULUSNOTICE);
+            //SoundManager.PlaySound(SoundType.OCULUSNOTICE);
 
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
@@ -63,7 +63,7 @@ public class OculusAI : MonoBehaviour
     private void Atk()
     {
         agent.isStopped = true;
-        SoundManager.PlaySound(SoundType.OCULUSATTACK);
+       // SoundManager.PlaySound(SoundType.OCULUSATTACK);
         Collider[] collsTocados = Physics.OverlapSphere(atkPoint.position, atRadius, isPlayer);
         if (collsTocados.Length > 0)
         {

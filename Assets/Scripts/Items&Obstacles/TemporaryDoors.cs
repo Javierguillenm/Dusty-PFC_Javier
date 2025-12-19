@@ -19,7 +19,7 @@ public class TemporaryDoors : MonoBehaviour
             wall.SetActive(false);
             door.SetActive(false);   
             anim.SetTrigger("Open");
-            SoundManager.PlaySound(SoundType.DOOR);
+            //SoundManager.PlaySound(SoundType.DOOR);
         }
     }
 }

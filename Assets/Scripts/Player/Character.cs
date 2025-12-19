@@ -85,7 +85,7 @@ public class Character : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && numSalto > 0)
         {
             anim.SetTrigger("Jump");
-            SoundManager.PlaySound(SoundType.JUMP);
+        //    SoundManager.PlaySound(SoundType.JUMP);
             movimientoY.y = Mathf.Sqrt(-2 * Physics.gravity.y * factorGravedad * jumpHeight);
             numSalto--;
             //rb.AddForce(new Vector3(0, 1, 0).normalized * jumpHeight, ForceMode.Impulse);
@@ -188,14 +188,14 @@ public class Character : MonoBehaviour
             }
             Polvo collectScript = other.gameObject.GetComponent<Polvo>();
             mony += collectScript.value;
-
-            SoundManager.PlaySound(SoundType.DUST);
+            
+            //SoundManager.PlaySound(SoundType.DUST);
             Destroy(other.gameObject);
             Debug.Log(mony);
         }
         if (other.gameObject.CompareTag("Key"))
         {
-            SoundManager.PlaySound(SoundType.KEY);
+            //SoundManager.PlaySound(SoundType.KEY);
             int key = other.gameObject.GetComponent<Keys>().keyId;
             Destroy(other.gameObject);
             Debug.Log("I have collected " + other.name);
@@ -240,7 +240,7 @@ public class Character : MonoBehaviour
             if (weaponId != 0)
             {
                 anim.SetTrigger("Attack");
-                SoundManager.PlaySound(SoundType.ATAACKWOOD);
+               // SoundManager.PlaySound(SoundType.ATAACKWOOD);
 
                 Debug.Log("Boing");
                 Collider[] collsTocados = Physics.OverlapSphere(atkP.position, range, whatIsEnemy);

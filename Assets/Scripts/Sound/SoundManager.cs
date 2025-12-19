@@ -1,5 +1,3 @@
-//Author: Small Hedge Games
-//Updated: 13/06/2024
 
 using System;
 using UnityEngine;
@@ -47,7 +45,7 @@ namespace SmallHedge.SoundManager
             if(!instance)
             {
                 instance = this;
-                audioSource = GetComponent<AudioSource>();
+               // audioSource = GetComponent<AudioSource>();
             }
         }
 
