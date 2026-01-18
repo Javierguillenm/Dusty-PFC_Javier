@@ -190,7 +190,7 @@ public class GameManager : MonoBehaviour
 
             menu.SetActive(false);
             hud.SetActive(true);
-            menuOn = false;
+            menuOn = true;
             hue.SetActive(false);
             //SoundManager.PlaySound(SoundType.PAUSE);
 
