@@ -41,7 +41,7 @@ public class MaxillaAI : MonoBehaviour
     }
     void PlayerNoticed()
     {
-       //SoundManager.PlaySound(SoundType.MAXILLANOTICE);
+     //  SoundManager.PlaySound(SoundType.MAXILLANOTICE);
 
         if (noticed)
         {
@@ -59,7 +59,7 @@ public class MaxillaAI : MonoBehaviour
     private void Atk()
     {
         agent.isStopped = true;
-      //  SoundManager.PlaySound(SoundType.MAXILLAATTACK);
+      // SoundManager.PlaySound(SoundType.MAXILLAATTACK);
         Collider[] collsTocados = Physics.OverlapSphere(atkPoint.position, atRadius, isPlayer);
         if (collsTocados.Length > 0)
         {

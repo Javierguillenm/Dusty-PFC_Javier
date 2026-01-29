@@ -98,7 +98,7 @@ public class ManusAI : MonoBehaviour
             Instantiate(yKey, atkPoint.position, atkPoint.rotation);
             anim.SetTrigger("Ouch");
             agent.isStopped = true;
-           // SoundManager.PlaySound(SoundType.MANUSDEAD);
+            SoundManager.PlaySound(SoundType.MANUSDEAD);
             GetComponent<ManusAI>().enabled = false;
         }
     }

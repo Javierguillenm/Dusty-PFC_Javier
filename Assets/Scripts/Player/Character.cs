@@ -189,13 +189,13 @@ public class Character : MonoBehaviour
             Polvo collectScript = other.gameObject.GetComponent<Polvo>();
             mony += collectScript.value;
             
-            //SoundManager.PlaySound(SoundType.DUST);
+           // SoundManager.PlaySound(SoundType.DUST);
             Destroy(other.gameObject);
             Debug.Log(mony);
         }
         if (other.gameObject.CompareTag("Key"))
         {
-            //SoundManager.PlaySound(SoundType.KEY);
+          //  SoundManager.PlaySound(SoundType.KEY);
             int key = other.gameObject.GetComponent<Keys>().keyId;
             Destroy(other.gameObject);
             Debug.Log("I have collected " + other.name);
@@ -240,7 +240,7 @@ public class Character : MonoBehaviour
             if (weaponId != 0)
             {
                 anim.SetTrigger("Attack");
-               // SoundManager.PlaySound(SoundType.ATAACKWOOD);
+            //    SoundManager.PlaySound(SoundType.ATAACKWOOD);
 
                 Debug.Log("Boing");
                 Collider[] collsTocados = Physics.OverlapSphere(atkP.position, range, whatIsEnemy);
