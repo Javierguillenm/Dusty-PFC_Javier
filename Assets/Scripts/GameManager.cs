@@ -177,8 +177,6 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.I) && menuOn == false && upgradeOn == false)
         {
-          //  SoundManager.PlaySound(SoundType.PAUSE);
-
             menu.SetActive(true);
             hud.SetActive(false);
             menuOn = true;
@@ -186,23 +184,16 @@ public class GameManager : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.I) && menuOn == true && upgradeOn == false)
         {
-          //  SoundManager.PlaySound(SoundType.MENUBUTTONS);
-
             menu.SetActive(false);
             hud.SetActive(true);
-            menuOn = true;
+            menuOn = false;
             hue.SetActive(false);
-           // SoundManager.PlaySound(SoundType.PAUSE);
-
         }
     }
     private void UpgradeMenu()
     {
         if (Input.GetKeyDown(KeyCode.U) && upgradeOn == false && menuOn == false)
-        {
-          //SoundManager.PlaySound(SoundType.MENUBUTTONS);
-     
-
+        {     
             upgradeMenu.SetActive(true);
             hud.SetActive(false);
             upgradeOn = true;
